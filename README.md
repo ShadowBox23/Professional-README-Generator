@@ -10,6 +10,9 @@
   * [Tests](#tests)
   * [Questions](#questions)
   
+  ## Walkthrough
+  https://www.youtube.com/watch?v=syeZ-A-eFWE
+  
   ## Installation
   Go to https://github.com/ShadowBox23/Professional-README-Generator and download the code base. To then run the application you must have node installed. Once that is all completed run npm install to download all the necessary dependencies.
 
