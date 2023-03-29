@@ -67,7 +67,9 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${data.license}
+  This application has the ${data.license} License.
+
+  For more information about the license, please see the ${renderLicenseLink(data.license)} for more information.
 
   ## Contributing
   ${data.contributing}
@@ -77,7 +79,8 @@ function generateMarkdown(data) {
 
   ## Questions
   If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
-  You can find more of my work at [${data.github}](https://github.com/${data.github}).
+  
+  You can find more of my work at [${data.name}](https://github.com/${data.name}).
 
 
 `;

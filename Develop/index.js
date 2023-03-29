@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // TODO: Create an array of questions for user input
-const generateMarkdown = ['./utils/generateMarkdown.js'];
+const generateMarkdown =  require('./utils/generateMarkdown.js');
 
 // array of questions for user 
 const questions = [
@@ -40,10 +40,11 @@ const questions = [
                 validate: installationInput => {
                     if (installationInput) {
                         return true;
-                        } else {
+                        } else { 
                         console.log("Please enter installation instructions!");
-                        return false;
-                    }
+                         return false;
+                        }
+        
                 }
                 },
                 {
@@ -54,7 +55,7 @@ const questions = [
                         if (usageInput) {
                             return true;
                             } else {
-                            console.log("Please enter usage information!");
+                            console.log("Please enter usage instructions!");
                             return false;
                             }
                         }
@@ -63,12 +64,12 @@ const questions = [
                             type: "list",
                             name: "license",
                             message: "What kind of license should your project have?",
-                            choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "No License"]
+                            choices: ["MIT", "APACHE", "GPL", "BSD", "No License"]
                         },
                         {
                             type: "input",
                             name: "contributing",
-                            message: "What are the guidelines for contributing to your project?",
+                            message: "How can other developers contribute to your project?",
                             validate: contributingInput => {
                                 if (contributingInput) {
                                     return true;
@@ -81,7 +82,7 @@ const questions = [
                                 {
                                 type: "input",
                                 name: "tests",
-                                message: "Provide examples on how to run tests.",
+                                message: "How can someone test your application.",
                                 validate: testsInput => {
                                     if (testsInput) {
                                         return true;
@@ -93,10 +94,10 @@ const questions = [
                                     },
                                     {
                                         type: "input",
-                                        name: "username",
+                                        name: "name",
                                         message: "What is your GitHub username?",
-                                        validate: usernameInput => {
-                                            if (usernameInput) {
+                                        validate: nameInput => {
+                                            if (nameInput) {
                                                 return true;
                                                 } else {
                                                 console.log("Please enter your GitHub username!");
